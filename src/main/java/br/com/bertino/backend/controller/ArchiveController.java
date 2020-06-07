@@ -54,7 +54,7 @@ public class ArchiveController {
         return archiveRepository.findAll();
     }
 
-    @GetMapping(path = {"/{id}"})
+    @GetMapping(path = {"findById/{id}"})
     public ResponseEntity findById(@PathVariable long id) {
         return archiveRepository.findById(id)
                 .map(record -> ResponseEntity.ok().body(record))
