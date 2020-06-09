@@ -15,7 +15,7 @@ import java.io.FileOutputStream;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://frontfalcon.herokuapp.com")
 @RequestMapping("/archive")
 public class ArchiveController {
 
