@@ -5,7 +5,8 @@ pipeline {
     
         stage('Dependency-Check') {
             steps {
-                sh "docker run owasp/dependency-check -scan /src --out /report"
+                sh "mvn dependency-check:check"
+                //sh "docker run owasp/dependency-check -scan /src --out /report"
             }
         }
     
@@ -23,7 +24,7 @@ pipeline {
             }
         }
 
-        stage('Salvar Artefato') {
+        /*stage('Salvar Artefato') {
             steps {
                 script{
                     def pom = readMavenPom file: 'pom.xml'
@@ -34,7 +35,7 @@ pipeline {
                         mavenAssetList: [[classifier: '', extension: '', filePath: env.WORKSPACE+'/target/backend.jar']], mavenCoordinate: [artifactId: "${pom.artifactId}", groupId: "${pom.groupId}", packaging: "${pom.packaging}", version: "${pom.version}"]]]
                 }
             }
-        }
+        }*/
         
     }
     post {
