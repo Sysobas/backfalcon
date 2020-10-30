@@ -15,6 +15,17 @@ pipeline {
                 sh "mvn clean package"
             }
         }
+	
+	stage("Run Gatling") {
+            steps {
+                sh 'mvn gatling:test'
+            }
+            post {
+                always {
+                    gatlingArchive()
+                }
+            }
+        }
         
         stage('Analise com SonarQube') {
             steps {
