@@ -3,12 +3,12 @@ pipeline {
 
     stages {
     
-        stage('Dependency-Check') {
+        /*stage('Dependency-Check') {
             steps {
                 sh "mvn dependency-check:check"
                 //sh "docker run owasp/dependency-check -scan /src --out /report"
             }
-        }
+        }*/
     
         stage('BUILD') {
             steps {
@@ -49,9 +49,9 @@ pipeline {
         }*/
         
     }
-    post {
+    /*post {
         always {
             dependencyCheckPublisher pattern: 'build/reports/dependency-check-report.xml'
         }
-    }
+    }*/
 }
