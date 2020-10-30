@@ -16,7 +16,7 @@ pipeline {
             }
         }
 	
-	stage("Run Gatling") {
+	/*stage("Run Gatling") {
             steps {
                 sh 'mvn gatling:test'
             }
@@ -25,15 +25,15 @@ pipeline {
                     gatlingArchive()
                 }
             }
-        }
+        }*/
         
-        stage('Analise com SonarQube') {
+        /*stage('Analise com SonarQube') {
             steps {
                 withSonarQubeEnv('sonar'){
                     sh "mvn sonar:sonar -Dsonar.projectKey=backfalcon"
                 }
             }
-        }
+        }*/
 
         /*stage('Salvar Artefato') {
             steps {
