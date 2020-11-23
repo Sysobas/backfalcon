@@ -7,9 +7,8 @@ pipeline {
             }
         }
         stage("Gatling run") {
-            steps {
                 sh 'mvn gatling:test'
-            }
+
             post {
                 always {
                     gatlingArchive()
