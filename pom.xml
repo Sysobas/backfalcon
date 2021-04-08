@@ -174,8 +174,8 @@
 						</goals>
 
 						<!--configuration>
-						<!-- Default values -->
-						<!--<configFolder>src/test/resources</configFolder-->
+						Default values
+						<configFolder>src/test/resources</configFolder>
 							<dataFolder>src/test/resources/data</dataFolder>
 							<resultsFolder>target/gatling/results</resultsFolder>
 							<requestBodiesFolder>src/test/resources/request-bodies</requestBodiesFolder>
