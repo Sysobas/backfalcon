@@ -173,14 +173,14 @@
 							<goal>execute</goal>
 						</goals>
 
-						<configuration>
+						<!--configuration>
 						<!-- Default values -->
 						<!--<configFolder>src/test/resources</configFolder-->
 							<dataFolder>src/test/resources/data</dataFolder>
 							<resultsFolder>target/gatling/results</resultsFolder>
 							<requestBodiesFolder>src/test/resources/request-bodies</requestBodiesFolder>
 							<simulationsFolder>src/test/scala</simulationsFolder>
-						</configuration>
+						</configuration-->
 		                        	<configuration>
 			                        	 <disableCompiler>true</disableCompiler>
 		                        	</configuration>
