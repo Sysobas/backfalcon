@@ -157,12 +157,12 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<plugin>
+			<!--plugin>
 				<groupId>net.alchim31.maven</groupId>
 				<artifactId>scala-maven-plugin</artifactId>
 				<version>${scala-maven-plugin.version}</version>
-			</plugin>
-			<plugin>
+			</plugin-->
+			<!--plugin>
 				<groupId>io.gatling</groupId>
 				<artifactId>gatling-maven-plugin</artifactId>
 				<version>${gatling-plugin.version}</version>
@@ -173,20 +173,19 @@
 							<goal>execute</goal>
 						</goals>
 
-						<!--configuration>
-						Default values
+						<configuration>
 						<configFolder>src/test/resources</configFolder>
 							<dataFolder>src/test/resources/data</dataFolder>
 							<resultsFolder>target/gatling/results</resultsFolder>
 							<requestBodiesFolder>src/test/resources/request-bodies</requestBodiesFolder>
 							<simulationsFolder>src/test/scala</simulationsFolder>
-						</configuration-->
+						</configuration>
 		                        	<configuration>
 			                        	 <disableCompiler>true</disableCompiler>
 		                        	</configuration>
 					</execution>
 				</executions>
-			</plugin>
+			</plugin-->
 		</plugins>
 	</build>
 
